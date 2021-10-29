@@ -135,3 +135,44 @@ export function formatInputDecimals(inputOne: string, inputTwo: string): string 
     .replace(/,/g, "");
   return result;
 }
+
+export function random(): string {
+  return BigNumber.random().toString();
+}
+
+export function toFixed(value: string | number, decimals: number): string {
+  return new BigNumber(`${value}`).toFixed(decimals).toString();
+}
+
+export function convertHexToNumber(hex: string): number {
+  return convertStringToNumber(convertHexToString(hex));
+}
+
+export function convertNumberToHex(value: string | number): string {
+  return convertStringToHex(convertNumberToString(value));
+}
+
+export function formatSignificantDecimals(
+  value: string,
+  decimals: number,
+  buffer?: number,
+): string | null {
+  if (
+    !new BigNumber(`${decimals}`).isInteger() ||
+    (buffer && !new BigNumber(`${buffer}`).isInteger())
+  ) {
+    return null;
+  }
+  buffer = buffer ? convertStringToNumber(buffer) : 3;
+  decimals = convertStringToNumber(decimals);
+  const absolute = new BigNumber(`${value}`).abs().toNumber();
+  if (smallerThan(absolute, 1)) {
+    decimals = value.slice(2).search(/[^0]/g) + buffer;
+    decimals = decimals < 8 ? decimals : 8;
+  } else {
+    decimals = decimals < buffer ? decimals : buffer;
+  }
+  let result = new BigNumber(`${value}`).toFixed(decimals);
+  result = new BigNumber(`${result}`).toString();
+  return result;
+}

@@ -11,6 +11,7 @@ const SHeader = styled.div`
   margin-bottom: 1px;
   width: 100%;
   height: 100px;
+  background-color: #ffb600;
   display: flex;
   align-items: center;
   justify-content: space-between;

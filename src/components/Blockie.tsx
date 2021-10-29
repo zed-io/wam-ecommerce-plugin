@@ -23,16 +23,8 @@ const SBlockieWrapper = styled.div<IBlockieStyleProps>`
 `;
 
 const Blockie = (props: IBlockieProps) => {
-  const seed = props.address.toLowerCase() || "";
-  const imgUrl = window.blockies
-    .create({
-      seed,
-    })
-    .toDataURL();
   return (
-    <SBlockieWrapper {...props} size={props.size}>
-      <img src={imgUrl} alt={props.address} />
-    </SBlockieWrapper>
+    <SBlockieWrapper {...props} size={props.size}/>
   );
 };
 

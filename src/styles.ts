@@ -13,6 +13,12 @@ export const colors = {
   pink: "255, 51, 102",
   red: "214, 75, 71",
   purple: "110, 107, 233",
+  grey45: "115, 115, 115",
+  grey90: "230, 230, 230",
+  darkBlue: "16, 28, 56",
+  yellow45: "230, 164, 0",
+  green35: "15, 163, 127",
+  background: "40, 44, 52",
 };
 
 export const fonts = {
@@ -21,6 +27,7 @@ export const fonts = {
     small: "14px",
     medium: "16px",
     large: "18px",
+    smallMedium: "14px",
     h1: "60px",
     h2: "50px",
     h3: "40px",
@@ -37,6 +44,7 @@ export const fonts = {
   },
   family: {
     OpenSans: `"Open Sans", sans-serif`,
+    RobotoMono: `"Roboto Mono", monospace`,
   },
 };
 
@@ -48,13 +56,17 @@ export const transitions = {
 };
 
 export const shadows = {
+  base: "0 5px 8px 0 rgba(239, 239, 239, 0.25)",
   soft:
     "0 4px 6px 0 rgba(50, 50, 93, 0.11), 0 1px 3px 0 rgba(0, 0, 0, 0.08), inset 0 0 1px 0 rgba(0, 0, 0, 0.06)",
   medium:
     "0 3px 6px 0 rgba(0, 0, 0, 0.06), 0 0 1px 0 rgba(50, 50, 93, 0.02), 0 5px 10px 0 rgba(59, 59, 92, 0.08)",
-  big: "0 15px 35px 0 rgba(50, 50, 93, 0.06), 0 5px 15px 0 rgba(50, 50, 93, 0.15)",
+  hard:
+    "0px 2px 6px 0 rgba(0, 0, 0, 0.1), 0 0 1px 0 rgba(50,50,93,0.02), -1px 2px 10px 0 rgba(59, 59, 92, 0.15)",
+  big:
+    "0 15px 35px 0 rgba(50, 50, 93, 0.06), 0 5px 15px 0 rgba(50, 50, 93, 0.15)",
   hover:
-    "0 7px 14px 0 rgba(50, 50, 93, 0.1), 0 3px 6px 0 rgba(0, 0, 0, 0.08), inset 0 0 1px 0 rgba(0, 0, 0, 0.06)",
+    "0 7px 14px 0 rgba(50, 50, 93, 0.1), 0 3px 6px 0 rgba(0, 0, 0, 0.08), inset 0 0 1px 0 rgba(0, 0, 0, 0.06)"
 };
 
 export const responsive = {
